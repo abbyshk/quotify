@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/auth_screen_background"
+    android:focusableInTouchMode="true"
+    tools:context="quotify.velhadev.com.quotify.postUi.MainActivity">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_create_quote"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_create_white_24px"
+        android:contentDescription="@string/write_quote"
+        app:layout_constraintEnd_toEndOf="@+id/profile_user_name"
+        app:layout_constraintStart_toStartOf="@+id/profile_user_name"
+        app:layout_constraintTop_toBottomOf="@+id/profile_user_name" />
+
+    <Button
+        android:id="@+id/sign_out_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/sign_out"
+        android:background="@android:color/transparent"
+        android:text="@string/sign_out_btn_text"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:alpha="0.3"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/btn_create_quote" />
+
+    <TextView
+        android:id="@+id/profile_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_user_image"
+        app:layout_constraintStart_toStartOf="@+id/profile_user_image"
+        app:layout_constraintTop_toBottomOf="@+id/profile_user_image"
+        tools:text="Random Name" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/empty_collection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+        android:text="@string/you_have_no_quotes_yet"
+        app:layout_constraintTop_toTopOf="@id/rv_personal_collection"
+        app:layout_constraintBottom_toBottomOf="@id/rv_personal_collection"
+        app:layout_constraintRight_toRightOf="@id/rv_personal_collection"
+        app:layout_constraintLeft_toLeftOf="@id/rv_personal_collection"/>
+
+    <ImageView
+        android:id="@+id/profile_user_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/profile_picture" />
+
+    <RelativeLayout
+        android:id="@+id/drag_view"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/profile_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/default_padding_margin"
+            android:layout_marginStart="@dimen/default_padding_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/white"
+            tools:text="Random Name" />
+
+        <ImageView
+            android:layout_width="@dimen/touch_size"
+            android:layout_height="@dimen/touch_size"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/default_padding_margin"
+            android:alpha="0"
+            android:src="@drawable/ic_keyboard_arrow_up_white_24px"
+            android:contentDescription="@string/slide_up" />
+
+        <ImageView
+            android:layout_width="@dimen/touch_size"
+            android:layout_height="@dimen/touch_size"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/default_padding_margin"
+            android:alpha="1"
+            android:src="@drawable/ic_keyboard_arrow_down_white_24px"
+            android:contentDescription="@string/slide_down" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_personal_collection"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/personal_image_collection"
+        app:layout_constraintBottom_toTopOf="@+id/drag_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+</android.support.constraint.ConstraintLayout>

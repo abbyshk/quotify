@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/paper_color">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touch_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/background_seting"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/up_button_placeholder"
+            android:layout_width="@dimen/touch_size"
+            android:layout_height="@dimen/touch_size"
+            android:layout_marginStart="@dimen/default_padding_margin"
+            android:contentDescription="@string/slide_up_and_down"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_keyboard_arrow_up_black_24px" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_heading_solid_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="@dimen/default_padding_margin"
+        android:layout_marginEnd="@dimen/default_padding_margin"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/solid_color_background"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gradient_check_box" />
+
+    <Button
+        android:id="@+id/solid_background_selector"
+        android:layout_width="@dimen/touch_size"
+        android:layout_height="@dimen/touch_size"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="@dimen/default_padding_margin"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"
+        android:contentDescription="@string/select_color"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_select_color1_heading"
+        app:layout_constraintStart_toEndOf="@+id/tv_select_color1_heading"
+        app:layout_constraintTop_toTopOf="@+id/tv_select_color1_heading"
+        app:layout_constraintVertical_bias="0.656" />
+
+    <TextView
+        android:id="@+id/tv_select_color1_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/select_solid_background"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/tv_select_color2_heading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_heading_solid_background" />
+
+    <TextView
+        android:id="@+id/tv_select_color2_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif-light"
+        android:visibility="gone"
+        android:text="@string/gradient_color_2"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/solid_background_color2_selector"
+        android:layout_width="@dimen/touch_size"
+        android:layout_height="@dimen/touch_size"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:background="@android:color/white"
+        android:contentDescription="@string/select_second_colour"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_select_color2_heading"
+        app:layout_constraintStart_toEndOf="@+id/tv_select_color2_heading"
+        app:layout_constraintTop_toTopOf="@+id/tv_select_color2_heading"
+        app:layout_constraintVertical_bias="0.678" />
+
+    <CheckBox
+        android:id="@+id/gradient_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/enable_gradient"
+        android:fontFamily="sans-serif-light"
+        android:saveEnabled="true"
+        android:text="@string/enable_gradient_background"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+</android.support.constraint.ConstraintLayout>
+

@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/widget_margin">
+
+    <ImageView
+        android:id="@+id/widget_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/auth_screen_background"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/quote_image" />
+
+    <ImageView
+        android:id="@+id/temp_iv"
+        android:src="@drawable/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_padding_margin"
+        android:contentDescription="@string/error_image"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/tv_widget"
+        android:text="@string/widget_msg_no_auth"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/temp_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/default_padding_margin"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+</RelativeLayout>

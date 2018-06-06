@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "165702683332",
+    "firebase_url": "https://velhadevs.firebaseio.com",
+    "project_id": "velhadevs",
+    "storage_bucket": "velhadevs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165702683332:android:0e115086e5a0b199",
+        "android_client_info": {
+          "package_name": "quotify.velhadev.com.quotify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165702683332-5m9r0h0bh5fjrg3u1mcid2ejd10f7a36.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "quotify.velhadev.com.quotify",
+            "certificate_hash": "7b36f8e2bb073e36aa649f78b4cdca29a7a09d4a"
+          }
+        },
+        {
+          "client_id": "165702683332-vdmneiitm8952hovlufator5qd1lvj2i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjjDM69Nws5R0DZlhEMDag7BoucGmh1-4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165702683332-vdmneiitm8952hovlufator5qd1lvj2i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

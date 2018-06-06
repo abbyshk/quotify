@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/delete_image"
+        android:title="@string/delete_image"/>
+
+    <item android:id="@+id/share_image"
+        android:title="@string/share_image"/>
+
+</menu>

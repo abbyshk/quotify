@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/paper_color"
+    tools:context="quotify.velhadev.com.quotify.postUi.WriteQuoteActivity">
+
+    <EditText
+        android:id="@+id/et_quote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin"
+        android:layout_marginTop="@dimen/default_padding_margin"
+        android:layout_marginEnd="@dimen/default_padding_margin"
+        android:hint="@string/quote_hint"
+        android:textColorHint="@android:color/darker_gray"
+        android:inputType="textNoSuggestions|textVisiblePassword|textMultiLine"
+        android:textColor="@android:color/black" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/accept"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:src="@drawable/ic_done_white_24px"
+        android:layout_below="@+id/et_quote"
+        android:layout_margin="@dimen/default_padding_margin"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/accept"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/cancel"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:src="@drawable/ic_close_white_24px"
+        android:layout_below="@+id/et_quote"
+        android:layout_margin="@dimen/default_padding_margin"
+        android:layout_toStartOf="@+id/accept"
+        android:contentDescription="@string/content_desc_cancel"/>
+
+</RelativeLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/paper_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/default_padding_margin"
+        tools:context="quotify.velhadev.com.quotifybitmapgenerator.EditorActivity">
+
+
+        <quotify.velhadev.com.quotify.editor.EditorView
+            android:id="@+id/bitmap_editor_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/editor_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:alpha="0.8"
+            android:background="@android:color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bitmap_editor_view" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_padding_margin"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/text_size_setting"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bitmap_editor_view" />
+
+        <SeekBar
+            android:id="@+id/text_size_seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/touch_size"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/change_quote_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/text_color_setting"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/font_spinner" />
+
+        <Button
+            android:id="@+id/selected_text_color"
+            android:layout_width="48dp"
+            android:layout_height="@dimen/touch_size"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black"
+            android:contentDescription="@string/select_text_colour"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="@+id/font_spinner"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <Spinner
+            android:id="@+id/font_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:padding="@dimen/default_padding_margin"
+            android:contentDescription="@string/content_desc_font_type"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/font_type"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_size_seek_bar" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/upload"
+            android:layout_width="@dimen/fab_size"
+            android:layout_height="@dimen/fab_size"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_cloud_upload_white_24px"
+            android:contentDescription="@string/content_desc_upload"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/selected_text_color" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
