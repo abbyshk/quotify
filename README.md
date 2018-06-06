@@ -1,6 +1,6 @@
 # Quotify
 
-Quotify is a android application that allows users to write a quotify and make its image. The image created by the user is pushed into the cloud. User can share their own images or others images into various social media platforms, Users can also delete their images.
+Quotify is a android application that allows users to write a quote and make its image. The image created by the user is pushed into the cloud. User can share their own images or others images into various social media platforms, Users can also delete their images.
 
 ## Demo apk : https://drive.google.com/open?id=15ssAIK2u64aBzj2zfbBbUFs3t0hRmSrT
 
